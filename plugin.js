@@ -167,9 +167,10 @@
 							root.removeClass( 'placeholder' );
 					} else {
 						// if data is empty, set it to the placeholder
-						addPlaceholder(ev);
+						ev.data.dataValue = placeholder;
+						root.addClass( 'placeholder' );
 					}
-				});
+				}, null, placeholder);
 
 				editor.on('blur', addPlaceholder, null, placeholder);
 				editor.on('mode', addPlaceholder, null, placeholder);
