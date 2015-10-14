@@ -122,7 +122,7 @@
 
 			// Placeholder - Start
 			// Get the placeholder from the replaced element or from the configuration
-			var placeholder = editor.element.getAttribute( 'placeholder' ) || editor.config.placeholder;
+			var placeholder = editor.element.getAttribute( 'placeholder' ) || editor.element.getAttribute( 'data-placeholder' ) || editor.config.placeholder;
 
 			if (placeholder) {
 				// CSS for WYSIWYG mode
