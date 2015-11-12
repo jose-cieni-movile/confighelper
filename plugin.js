@@ -73,7 +73,7 @@
 
 			root.removeClass( 'placeholder' );
 			// fill it properly
-			if (CKEDITOR.dtd[ root.getName() ]['p']) {
+			if (editor.config.autoParagraph && CKEDITOR.dtd[ root.getName() ]['p']) {
 				root.setHtml( '<p><br/></p>' );
 				// Set caret in position
 				var range = new CKEDITOR.dom.range(editor.document);
